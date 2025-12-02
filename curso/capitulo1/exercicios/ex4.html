@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pedido Exercicio 4</title>
+</head>
+<body>
+    <h1>Exercicio 4</h1>
+    <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Informações do Cliente</legend>
+
+            <label for="Nome">Nome Completo: </label><br>
+            <input type="text" id="Nome" name="Nome"
+            required placeholder="Seu nome completo"
+            autocomplete="name"> <br> <br>
+            
+            <label for="email">Email: </label><br>
+            <input type="email" id="email" name="email"
+            required placeholder="Seu email"
+            autocomplete="email"> <br> <br>
+
+            <label for="Telefone">Telefone: </label><br>
+            <input type="tel" id="Telefone" name="Telefone"
+            required pattern="^\(\d{2}\) \d{5}-\d{4}$"
+            placeholder="(22) 99999-9999"> <br> <br>
+
+            <label for="senha">Senha: </label><br>
+            <input type="password" id="senha" name="senha"
+            required minlength="8"
+            pattern=".{8,}"
+            placeholder="Mínimo 8 caracteres"> <br> <br>
+
+            <label for="site">Site(Opcional): </label> <br>
+            <input type="url" id="site" name="site"
+            placeholder="https://www.exemplo.com"><br><br>
+
+        </fieldset>
+
+        <fieldset>
+    <legend>Detalhes do Pedido</legend>
+
+    <label for="cor">Cor Preferencial:</label><br>
+    <input type="color" id="cor" name="cor" value="#000000"><br><br>
+
+    <label for="entrega">Data e Hora da Entrega:</label><br>
+    <input type="datetime-local" id="entrega" name="entrega"
+           required
+           min="2026-01-01T00:00"
+           max="2026-12-31T23:59"><br><br>
+
+    <label for="quantidade">Quantidade de Itens: <span id="valorQuantidade">5</span>
+    </label><br>
+    <input type="range" id="quantidade" name="quantidade"
+           min="1" max="10" value="5"
+           oninput="valorQuantidade.textContent = this.value"><br><br>
+
+    <label for="modelo">Modelo do Produto:</label><br>
+    <input id="modelo" name="modelo" type="text" list="opcoesModelos"
+           required placeholder="Escolha o modelo"><br>
+
+    <datalist id="opcoesModelos">
+        <option value="PS5">
+        <option value="Notebook Lenovo">
+        <option value="Iphone 20">
+    </datalist><br><br>
+
+    <label for="comprovante">Comprovante de Compra (Upload):</label><br>
+    <input type="file" id="comprovante" name="comprovante"
+           required
+           accept=".jpg, .jpeg, .png, .pdf"><br><br>
+</fieldset>
+
+
+
+    <fieldset>
+        <legend>Opções de Envio</legend>
+
+        <p>Tipo de Envio:</p>
+        <label>
+            <input type="radio" name="envio" value="normal" checked>
+            Envio Normal
+        </label><br>
+
+        <label>
+            <input type="radio" name="envio" value="expresso">
+            Envio Expresso
+        </label><br><br>
+
+        <label for="comentarios">Comentários Adicionais:</label><br>
+        <textarea id="comentarios" name="comentarios"
+                  rows="5" cols="40"
+                  minlength="10" maxlength="300"
+                  placeholder="Digite entre 10 e 300 caracteres."></textarea>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Finalização</legend>
+
+        <label>
+            <input type="checkbox" name="termos" required>
+            Eu concordo com os Termos de Serviço
+        </label><br><br>
+
+        <input type="submit" value="Finalizar Pedido">
+    </fieldset>
+
+
+
+    </form>
+</body>
+</html>
