@@ -1,0 +1,49 @@
+nav {
+    float: left;
+    width: 250px;
+    margin: 0;
+    padding-right: 20px; 
+    border-right: 1px solid black; 
+    height: 100vh; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2;
+}
+a {
+    display: block;           
+    background-color: #808080; 
+    color: black;             
+    font-weight: bold;        
+    text-decoration: none;   
+    padding: 15px;           
+    margin-bottom: 5px;          
+}
+
+a:hover {
+    background-color: #ffffff;
+    color: red;
+}
+section {
+    float: right;      
+    width: 1050px 
+}
+
+footer {
+    width: 100%;
+    background-color: #808080; 
+    color: white;
+    padding: 5px;
+    float: left;
+}
+
+
+h1 {
+    color: rgb(252, 252, 252);
+    background-color: #808080; 
+    padding: 7px;
+    margin: 0;
+
+}
